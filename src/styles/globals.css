@@ -16,12 +16,220 @@
   }
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  height: 100%;
+}
+
+body {
+  --color-text: #FFF;
+  --color-title: #FFF;
+  --img-maxwidth: 315px;
+  --blendmode-title: difference;
+  --filter-img: none;
+  color: var(--color-text);
+  font-family: quiroh, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* @VogueNeue font weights */
+.vn-w-xs {
+  font-variation-settings: "wght" 300;
+}
+.vn-w-s {
+  font-variation-settings: "wght" 400;
+}
+.vn-w-m {
+  font-variation-settings: "wght" 500;
+}
+.vn-w-l {
+  font-variation-settings: "wght" 666;
+}
+.vn-w-xl {
+  font-variation-settings: "wght" 833;
+}
+.vn-w-2xl {
+  font-variation-settings: "wght" 1000;
+}
+
+.trail__container {
+  /* height: 300px; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate;
+}
+
+.content__img {
+  max-width: var(--img-maxwidth);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  will-change: transform;
+  filter: var(--filter-img);
+  @apply rounded-3xl;
+}
+
+.text__paragraph1 {
+  @apply text-white text-[20px] vn-w-s leading-none tracking-wide uppercase;
+}
+
+.text__header1 {
+  font-variation-settings: "wght" 700;
+  @apply text-white text-[230px] leading-none tracking-normal uppercase;
+}
+
+.text__header2 {
+  @apply text-white text-[230px] leading-none tracking-normal uppercase;
+}
+
+.button__cta {
+	@apply block bg-transparent border-[1px] border-white border-solid transition-all z-[9999] rounded-full px-7 pt-4 pb-3;
+}
+
+.button__cta:hover {
+	@apply bg-white;
+}
+
+.button__cta:hover p {
+	@apply text-black vn-w-l tracking-tight;
+}
+
+.linkflip > span {
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  z-index: 1;
+  transition: -webkit-transform 1.175s cubic-bezier(.15,1,.15,1);
+  transition: transform 1.175s cubic-bezier(.15,1,.15,1);
+}
+
+.linkflip > span::after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+}
+
+.linkflip > span::after {
+  top: 100%;
+  transform-origin: left top;
+  transition: -webkit-transform 2s cubic-bezier(.2,1,.22,1);
+  transition: transform 2s cubic-bezier(.2,1,.22,1);
+}
+
+.linkflip:hover > span {
+  transform: translateY(-100%);
+}
+
+.shake_on_hover:hover {
+  animation: horizontal-shaking .333s infinite;
+  animation-iteration-count: 1;
+}
+
+.noise__container {
+  opacity: 0;
+  animation-delay: 0.1s;
+  animation-duration: 1.5s;
+  animation-name: noisegrain-intro;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.noise {
+  animation: grain 6s steps(10) infinite;
+  background-image: url("/assets/noise-full.png");
+  background-repeat: repeat;
+  height: 300%;
+  left: -50%;
+  opacity: 0.035;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+  z-index: 100;
+  pointer-events: none;
+}
+
+@keyframes noisegrain-intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 53em) {
+  :root {
+    font-size: 18px;
+  }
+  body {
+    overflow: hidden;
+  }
 }
