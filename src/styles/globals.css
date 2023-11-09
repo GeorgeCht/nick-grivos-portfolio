@@ -29,6 +29,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,8 +38,6 @@ body {
   --img-maxwidth: 315px;
   --blendmode-title: difference;
   --filter-img: none;
-  color: var(--color-text);
-  font-family: quiroh, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

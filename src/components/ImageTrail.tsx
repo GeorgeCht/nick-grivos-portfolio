@@ -20,6 +20,7 @@ const ImageTrail = () => {
     '/img/7.webp',
     '/img/8.webp',
     '/img/9.webp',
+    '/img/10.webp',
   ];
 
   const mathUtils = {
@@ -255,7 +256,7 @@ const ImageTrail = () => {
     {imagePaths.map((path, index) => (
       <Image
         key={index}
-        className={'content__img block w-[315px] h-[315px] aspect-square'}
+        className={'content__img block w-[160px] md:w-[315px] h-[160px] md:h-[315px] aspect-square'}
         src={path}
         width={315}
         height={315}
