@@ -29,7 +29,7 @@ export default function Home() {
           </h2>
           <Link href={'mailto:hello@nickgrivos.com'} className={'button__cta'}>
             <p className={'text__paragraph1 vogueneue text-center'}>
-              Having a project in mind?
+              Let’s work together!
             </p>
           </Link>
           
