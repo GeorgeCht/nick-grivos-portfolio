@@ -3,7 +3,7 @@ import LinkX from './LinkX';
 
 const Footer = () => {
   return (
-    <footer className={'flex relative flex-row w-full justify-center z-[9999] p-10'}>
+    <footer className={'flex relative flex-row w-full justify-center z-[9999] md:p-10 p-5'}>
       <div className={'w-1/3 self-center'}>
         <LinkX href={'#'} text='(LINKEDIN)' className={'text__paragraph1 vogueneue'}>
           (LINKEDIN)

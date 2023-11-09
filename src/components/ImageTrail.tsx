@@ -8,7 +8,7 @@ const ImageTrail = () => {
   const imagesTotal = useRef(0);
   const imgPosition = useRef(0);
   const zIndexVal   = useRef(1);
-  const threshold   = 400;
+  const threshold   = 340;
 
   const imagePaths = [
     '/img/1.webp',

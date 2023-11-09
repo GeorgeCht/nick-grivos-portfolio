@@ -4,7 +4,7 @@ import LinkX from './LinkX';
 
 const Header = () => {
   return (
-    <header className={'flex relative flex-row w-full justify-center z-[9999] p-10'}>
+    <header className={'flex relative flex-row w-full justify-center z-[9999] md:p-10 p-5'}>
       <div className={'w-1/3 self-center'}>
         <Link href={'/'}>
           <GrivosLogo />

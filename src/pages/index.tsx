@@ -46,10 +46,10 @@ export default function Home() {
           <p className={'text__paragraph1 vogueneue'}>
             Full website is coming soon!
           </p>
-          <h2 className={'text__header1 tttrailers mt-2'}>
+          <h2 className={'text__header1 tttrailers text-center mt-2'}>
             Your story
           </h2>
-          <h2 className={'text__header2 pprightserif -mt-10 mb-2 z-[9999]'}>
+          <h2 className={'text__header2 pprightserif text-center md:-mt-10 -mt-4 mb-2 z-[9999]'}>
             Visually told
           </h2>
           <Link href={'/'} className={'button__cta'}>
