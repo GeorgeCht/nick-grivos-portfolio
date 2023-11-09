@@ -93,11 +93,11 @@ body {
 
 .text__header1 {
   font-variation-settings: "wght" 700;
-  @apply text-white md:text-[230px] text-[19vw] leading-none tracking-normal uppercase;
+  @apply text-white md:text-[230px] text-[24vw] leading-none tracking-normal uppercase;
 }
 
 .text__header2 {
-  @apply text-white xl:text-[230px] lg:text-[18vw] text-[18vw] leading-none tracking-normal uppercase;
+  @apply text-white xl:text-[230px] lg:text-[18vw] text-[24vw] md:leading-none leading-[0.8] tracking-normal uppercase;
 }
 
 .button__cta {
