@@ -8,7 +8,7 @@ const ImageTrail = () => {
   const imagesTotal = useRef(0);
   const imgPosition = useRef(0);
   const zIndexVal   = useRef(1);
-  const threshold   = 300;
+  const threshold   = 400;
 
   const imagePaths = [
     '/img/1.webp',
@@ -163,7 +163,7 @@ const ImageTrail = () => {
         rotate: mathUtils.random(0, distance / 10) * direction,
       })
       .to(img, {
-        duration: 0.9,
+        duration: .9,
         ease: 'expo.easeOut',
         x: mousePos.current.x - img.width / 2,
         y: mousePos.current.y - img.height / 2,
@@ -172,13 +172,13 @@ const ImageTrail = () => {
       .to(img, {
         duration: 1,
         ease: 'quint.easeOut',
-        scale: .2,
-      }, .666)
-      .to(img, {
-        duration: 1,
-        ease: 'power1.easeOut',
-        opacity: 0,
-      }, .666);
+        scale: 0,
+      }, .25)
+      // .to(img, {
+      //   duration: 1,
+      //   ease: 'power1.easeOut',
+      //   opacity: 0,
+      // }, .25);
   };
 
   const resizeImages = () => {
