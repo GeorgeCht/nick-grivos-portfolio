@@ -27,7 +27,7 @@ export default function Home() {
           <h2 className={'text__header2 pprightserif text-center md:-mt-10 -mt-4 mb-2 z-[9999]'}>
             Visually told
           </h2>
-          <Link href={'mailto:hello@nickgrivos.com'} className={'button__cta'}>
+          <Link href={'mailto:nickgrivos@gmail.com'} className={'button__cta'}>
             <p className={'text__paragraph1 vogueneue text-center'}>
               Let’s work together!
             </p>

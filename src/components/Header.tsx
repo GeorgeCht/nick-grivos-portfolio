@@ -16,7 +16,7 @@ const Header = () => {
         </p>
       </div>
       <div className={'w-1/3 self-center float-right text-right'}>
-        <LinkX href={'mailto:hello@nickgrivos.com'} text='(CONTACT)' className={'text__paragraph1 vogueneue'}>
+        <LinkX href={'mailto:nickgrivos@gmail.com'} text='(CONTACT)' className={'text__paragraph1 vogueneue'}>
           (CONTACT)
         </LinkX>
       </div>
