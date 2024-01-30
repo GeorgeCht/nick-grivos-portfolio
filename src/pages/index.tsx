@@ -1,11 +1,10 @@
-import Head from 'next/head';
-import Link from 'next/link';
+import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
-
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>
           Nick Grivos Portfolio | © 2023
         </title>
@@ -34,7 +33,7 @@ export default function Home() {
           </Link>
           
         </div>
-      </section>
+      </section> */}
     </>
-  )
+  );
 }
