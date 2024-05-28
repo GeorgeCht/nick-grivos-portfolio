@@ -1,10 +1,13 @@
+import MainLayout from "@/components/MainLayout";
 import Head from "next/head";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      {/* <Head>
+      <MainLayout>
+        <></>
+        {/* <Head>
         <title>
           Nick Grivos Portfolio | © 2023
         </title>
@@ -34,6 +37,7 @@ export default function Home() {
           
         </div>
       </section> */}
+      </MainLayout>
     </>
   );
 }

@@ -29,12 +29,11 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {
-  --color-text: #FFF;
-  --color-title: #FFF;
+  --color-text: #fff;
+  --color-title: #fff;
   --img-maxwidth: 315px;
   --blendmode-title: difference;
   --filter-img: none;
@@ -101,7 +100,7 @@ body {
 }
 
 .button__cta {
-	@apply block bg-transparent border-[1px] border-white border-solid transition-all z-[9999] rounded-full px-7 pt-4 pb-3;
+  @apply block bg-transparent border-[1px] border-white border-solid transition-all z-[9999] rounded-full px-7 pt-4 pb-3;
 }
 
 @media screen and (max-width: 768px) {
@@ -117,11 +116,11 @@ body {
 }
 
 .button__cta:hover {
-	@apply bg-white;
+  @apply bg-white;
 }
 
 .button__cta:hover p {
-	@apply text-black vn-w-l tracking-tight;
+  @apply text-black vn-w-l tracking-tight;
 }
 
 .linkflip > span {
@@ -129,8 +128,8 @@ body {
   position: relative;
   line-height: normal;
   z-index: 1;
-  transition: -webkit-transform 1.175s cubic-bezier(.15,1,.15,1);
-  transition: transform 1.175s cubic-bezier(.15,1,.15,1);
+  transition: -webkit-transform 1.175s cubic-bezier(0.15, 1, 0.15, 1);
+  transition: transform 1.175s cubic-bezier(0.15, 1, 0.15, 1);
 }
 
 .linkflip > span::after {
@@ -142,8 +141,8 @@ body {
 .linkflip > span::after {
   top: 100%;
   transform-origin: left top;
-  transition: -webkit-transform 2s cubic-bezier(.2,1,.22,1);
-  transition: transform 2s cubic-bezier(.2,1,.22,1);
+  transition: -webkit-transform 2s cubic-bezier(0.2, 1, 0.22, 1);
+  transition: transform 2s cubic-bezier(0.2, 1, 0.22, 1);
 }
 
 .linkflip:hover > span {
@@ -151,7 +150,7 @@ body {
 }
 
 .shake_on_hover:hover {
-  animation: horizontal-shaking .333s infinite;
+  animation: horizontal-shaking 0.333s infinite;
   animation-iteration-count: 1;
 }
 
@@ -244,8 +243,5 @@ body {
 @media screen and (min-width: 53em) {
   :root {
     font-size: 18px;
-  }
-  body {
-    overflow: hidden;
   }
 }
